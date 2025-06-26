@@ -1,3 +1,4 @@
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -29,5 +30,74 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+}
+
+/* --- Generated CSS --- */
+
+/* Merged selector for .columns.columns5 */
+.columns.columns5 {
+  background: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 56px 0;
+  margin: 0;
+}
+
+/* Keep the rest of generated CSS unchanged */
+.columns.columns5 > div {
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.columns.columns5 .columns-img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.columns.columns5 img {
+  display: block;
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+}
+
+.columns.columns5 .columns-img-col:nth-child(1) img {
+  border: 2px solid #fff;
+  border-radius: 28px;
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+
+@media (width <= 700px) {
+  .columns.columns5 {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 0;
+  }
+
+  .columns.columns5 > div {
+    flex-direction: column;
+    gap: 32px;
   }
 }
