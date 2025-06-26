@@ -1,3 +1,4 @@
+
 .accordion details {
   border: 1px solid #dadada;
 }
@@ -58,4 +59,73 @@
 .accordion details[open] .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
+}
+
+.accordion.accordion7 .accordion-item-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 12px 20px 32px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #222;
+  border-bottom: 1px solid #deded9;
+  background: #f7f7f3;
+  cursor: pointer;
+  min-height: 40px;
+  gap: 0;
+  position: relative;
+}
+
+.accordion.accordion7 .accordion-item:last-child .accordion-item-label {
+  border-bottom: none;
+}
+
+.accordion.accordion7 .accordion-item-label > p {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+  font-weight: 400;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+  padding-right: 12px;
+  line-height: 1.4;
+}
+
+.accordion.accordion7 .accordion-item-label::after {
+  display: inline-block;
+  margin-left: 0;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid #222;
+  border-bottom: 2px solid #222;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  background: transparent;
+  content: "";
+  box-sizing: border-box;
+  align-self: center;
+}
+
+.accordion.accordion7 details[open] > .accordion-item-label::after {
+  transform: rotate(-135deg);
+}
+
+.accordion.accordion7 .accordion-item-body {
+  background: #f7f7f3;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 18px;
+  color: #222;
+  padding: 0 32px 24px;
+  border: none;
+}
+
+.accordion.accordion7 details {
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: none;
+  background: none;
 }
