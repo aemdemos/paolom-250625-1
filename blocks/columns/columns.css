@@ -1,4 +1,5 @@
 
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -101,3 +102,143 @@
     gap: 32px;
   }
 }
+
+/* Merged selector for .columns.columns8 */
+.columns.columns8 {
+  background: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.columns.columns8 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  width: 100%;
+  padding: 56px 0 48px;
+  box-sizing: border-box;
+}
+
+/* Left column */
+.columns.columns8 > div > div:first-child {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.columns.columns8 h2 {
+  font-family: Syncopate, "Syncopate Fallback", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 1.07;
+  letter-spacing: 0.015em;
+  color: #000;
+  margin: 0 0 36px;
+  word-break: break-word;
+}
+
+.columns.columns8 p:not(.button-container) {
+  font-family: "Instrument Sans", "Instrument Sans Fallback", sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 570px;
+}
+
+/* Hide any ul above the headline (if present) */
+.columns.columns8 > div > div > ul {
+  display: none;
+}
+
+/* Right column (button area) */
+.columns.columns8 > div > div:last-child {
+  flex: 0 0 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+  justify-content: center;
+  height: 100%;
+  padding-left: 0;
+}
+
+/* Button container and button styling */
+.columns.columns8 .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.columns.columns8 .button {
+  width: 100%;
+  max-width: 320px;
+  min-width: 200px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  font-family: "Instrument Sans", "Instrument Sans Fallback", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: 0 2px 0 0 #f3f9b2 inset;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  padding: 0 28px;
+}
+
+.columns.columns8 .button,
+.columns.columns8 .button:visited {
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+/* Remove inherited button padding/margin */
+.columns.columns8 .button {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (width <= 900px) {
+  .columns.columns8 > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 36px 0;
+  }
+
+  .columns.columns8 > div > div:last-child {
+    width: 100%;
+    min-width: 0;
+    align-items: stretch;
+    padding-left: 0;
+  }
+
+  .columns.columns8 .button {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    font-size: 17px;
+  }
+}
+
